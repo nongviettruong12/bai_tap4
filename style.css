@@ -29,16 +29,16 @@ ul>li{
 p{
   font-family:  'Times New Roman', Times, serif;
 }
-.item2{
+.navbar-left{
   color:#92A3BD;
   width: 30vh;
 }
-.item2 nav {
+.navbar-left nav {
   display: flex;
   flex-direction: column;
 }
 
-.item2 nav ul {
+.navbar-left nav ul {
   padding: 0;
   margin: 0;
 }
@@ -151,7 +151,7 @@ ul>li>a{
   font-size: 12px;
   color: #999;
 }
-.item3 {
+.card_content {
   display: grid;
   padding: 10px;
   grid-template-columns: repeat(4, 1fr);
@@ -166,8 +166,27 @@ ul>li>a{
 .box_2{
   width: 100%;
 }
+.navbar-left {
+  transition: all 0.3s ease;
+  /* Các kiểu mặc định khác */
+}
+
+.navbar-left.closed {
+  display: none; /* Hoặc các kiểu khác để ẩn */
+}
+
+.navbar-left.open {
+  display: block; /* Hoặc các kiểu khác để hiện */
+}
+.closed {
+  transform: translateX(-100%);
+}
+
+.open {
+  transform: translateX(0);
+}
 @media (max-width: 992px) {
-  .item3 {
+  .card_content {
     grid-template-columns: repeat(3, 1fr);
   }
   .spacing_text_navbar {
@@ -176,7 +195,7 @@ ul>li>a{
 .spacing_mobile{
   text-align: center;
 }
-.item2 {
+.navbar-left {
   width: 50px;
 }
 .hidden{
@@ -195,12 +214,18 @@ ul>li>a{
 .spacing_text_navbar{
   padding: 0;
 }
+.navbar-left>nav>ul{
+  margin-left: 10px;
+}
+.spacing_href{
+  visibility: hidden;
+}
 
 }
 
 /* Responsive for small tablets and large phones */
 @media (max-width: 768px) {
-  .item3 {
+  .card_content {
     grid-template-columns: repeat(2, 1fr);
   }
   .spacing_text_navbar {
@@ -209,7 +234,7 @@ ul>li>a{
 .spacing_mobile{
   text-align: center;
 }
-.item2 {
+.navbar-left {
   width: 50px;
 }
 .hidden{
@@ -228,11 +253,14 @@ ul>li>a{
 .spacing_text_navbar{
   padding: 0;
 }
+.navbar-left>nav>ul{
+  margin-left: 10px;
+}
 }
 
 /* Responsive for mobile */
 @media (max-width: 576px) {
-  .item3 {
+  .card_content {
     grid-template-columns: repeat(1, 1fr);
   }
   .spacing_text_navbar {
@@ -241,7 +269,7 @@ ul>li>a{
 .spacing_mobile{
   text-align: center;
 }
-.item2 {
+.navbar-left {
   width: 50px;
 }
 .hidden{
@@ -259,6 +287,9 @@ ul>li>a{
 }
 .spacing_text_navbar{
   padding: 0;
+}
+.navbar-left>nav>ul{
+  margin-left: 10px;
 }
 }
 @media (max-width: 992px) {
@@ -270,7 +301,7 @@ ul>li>a{
 
 /* Responsive for small tablets and large phones */
 @media (max-width: 768px) {
-  .item2 {
+  .navbar-left {
     grid-template-columns: repeat(2, 1fr);
   }
   .spacing_text_navbar {
@@ -279,7 +310,7 @@ ul>li>a{
 .spacing_mobile{
   text-align: center;
 }
-.item2 {
+.navbar-left {
   width: 50px;
 }
 .hidden{
@@ -293,7 +324,7 @@ ul>li>a{
 
 /* Responsive for mobile */
 @media (max-width: 576px) {
-  .item2 {
+  .navbar-left {
     grid-template-columns: 1fr;
   }
   .spacing_text_navbar {
@@ -302,7 +333,7 @@ ul>li>a{
 .spacing_mobile{
   text-align: center;
 }
-.item2 {
+.navbar-left {
   width: 50px;
 }
 .hidden{
